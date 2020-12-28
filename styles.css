@@ -33,18 +33,25 @@ body #top-section nav a {
   background-color: #aae8eb;
 }
 
-body h2 {
+body main {
+  background-image: url("./images/glass-background.PNG");
+}
+
+body main h2 {
   color: red;
   padding: 5px;
+  background-color: transparent;
 }
 
-body p {
+body main p {
   padding: 5px;
   color: blue;
+  background-color: white;
 }
 
-body ol li {
+body main ol li {
   padding: 5px 5px 3px 5px;
   color: saddlebrown;
+  background-color: white;
 }
 /*# sourceMappingURL=styles.css.map */
