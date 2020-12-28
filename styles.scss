@@ -7,29 +7,51 @@
 }
 
 body {
-  header {
-    padding: 5px;
-    font-size: 25px;
-    font-weight: 700;
-    border-bottom: 2px black solid;
+
+  #top-section {
+    h1 {
+      padding: 5px;
+      font-size: 25px;
+      font-weight: 600;
+      border-bottom: 2px black solid;
+      text-align: center;
+      background: rgb(230, 227, 227);
+    }
+    nav {
+      min-height: 40px;
+      background-color: beige;
+      a {
+        margin: 5px;
+        padding: 5px;
+        width: 80px;
+        min-width: 80px;
+        border: 1px black solid;
+        border-radius: 3px;
+        text-decoration: none;
+        color: black;
+        font-weight: 900;
+        background-color: rgb(170, 232, 235);
+      }
+      #link1 {
+        
+      } 
+      #link2 {
+       
+      } 
+    }
   }
 
-  nav {
-    min-height: 40px;
-    background-color: beige;
-    
-  }
-
-  #company-overview {
+  h2 {
     color: red;
     padding: 5px;
   }
-  #overview-paragraph {
+
+  p {
     padding: 5px;
     color: blue;
   }
 
-  #overview-list li {
+  ol li {
     padding: 5px 5px 3px 5px;
     color: saddlebrown;
   }
