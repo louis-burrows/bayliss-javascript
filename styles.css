@@ -3,9 +3,33 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  font-family: 'Rokkitt', serif;
 }
 
-h1 {
-  font-family: 'Lobster', cursive;
+body header {
+  padding: 5px;
+  font-size: 25px;
+  font-weight: 700;
+  border-bottom: 2px black solid;
+}
+
+body nav {
+  min-height: 40px;
+  background-color: beige;
+}
+
+body #company-overview {
+  color: red;
+  padding: 5px;
+}
+
+body #overview-paragraph {
+  padding: 5px;
+  color: blue;
+}
+
+body #overview-list li {
+  padding: 5px 5px 3px 5px;
+  color: saddlebrown;
 }
 /*# sourceMappingURL=styles.css.map */
