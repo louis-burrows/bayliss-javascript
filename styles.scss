@@ -2,35 +2,50 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Rokkitt', serif;
+  font-family: 'Libre Baskerville', serif;
 
 }
 
 body {
-
+  
+  background-image: url("./images/body-background.png");
+  background-repeat: repeat-y;
+  background-position-x: center;
+  background-color: black;
+  // background-attachment: fixed;
+  
   #top-section {
+    
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    min-height: 110px;     
     h1 {
-      padding: 5px;
-      font-size: 25px;
+      color: white;
+      padding: 15px;
+      min-height: 70px;
+      max-height: 70px;
+      font-size: 20px;
       font-weight: 600;
-      border-bottom: 2px black solid;
       text-align: center;
-      background: rgb(230, 227, 227);
+      background: transparent;
     }
     nav {
       min-height: 40px;
-      background-color: beige;
+      background-image: linear-gradient(rgba(0, 0, 0, 0), rgb(0, 0, 0));
+      text-align: center;
+      
       a {
         margin: 5px;
         padding: 5px;
         width: 80px;
         min-width: 80px;
-        border: 1px black solid;
-        border-radius: 3px;
+        border: 1px rgb(0, 0, 0) solid;
+        border-radius: 5px;
         text-decoration: none;
-        color: black;
+        color: rgb(0, 0, 0);
         font-weight: 900;
-        background-color: rgb(170, 232, 235);
+        background-color: rgba(255, 255, 255, 0.39);
       }
       #link1 {
         
@@ -39,21 +54,33 @@ body {
        
       } 
     }
+    
   }
 
-  h2 {
-    color: red;
-    padding: 5px;
-  }
+  main {
+ 
+    #container-for-content {
+      position: sticky;
+      top: 110px;
+      overflow: hidden;
+      max-width: 500px;
+      text-align: left;
+      background-color: rgba(255, 255, 255, 0.322);
+    
+      h2 {
+        color: rgb(253, 253, 253);
+        padding: 5px;
+      }
 
-  p {
-    padding: 5px;
-    color: blue;
-  }
+      p {
+        padding: 5px;
+        color: rgb(248, 248, 248);
+      }
 
-  ol li {
-    padding: 5px 5px 3px 5px;
-    color: saddlebrown;
+      ol li {
+        padding: 5px 5px 3px 5px;
+        color: rgb(197, 193, 191);
+      }
+    }
   }
 }
-

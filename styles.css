@@ -3,21 +3,39 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: 'Rokkitt', serif;
+  font-family: 'Libre Baskerville', serif;
+}
+
+body {
+  background-image: url("./images/body-background.png");
+  background-repeat: repeat-y;
+  background-position-x: center;
+  background-color: black;
+}
+
+body #top-section {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  min-height: 110px;
 }
 
 body #top-section h1 {
-  padding: 5px;
-  font-size: 25px;
+  color: white;
+  padding: 15px;
+  min-height: 70px;
+  max-height: 70px;
+  font-size: 20px;
   font-weight: 600;
-  border-bottom: 2px black solid;
   text-align: center;
-  background: #e6e3e3;
+  background: transparent;
 }
 
 body #top-section nav {
   min-height: 40px;
-  background-color: beige;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(black));
+  background-image: linear-gradient(rgba(0, 0, 0, 0), black);
+  text-align: center;
 }
 
 body #top-section nav a {
@@ -26,25 +44,35 @@ body #top-section nav a {
   width: 80px;
   min-width: 80px;
   border: 1px black solid;
-  border-radius: 3px;
+  border-radius: 5px;
   text-decoration: none;
   color: black;
   font-weight: 900;
-  background-color: #aae8eb;
+  background-color: rgba(255, 255, 255, 0.39);
 }
 
-body h2 {
-  color: red;
+body main #container-for-content {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 110px;
+  overflow: hidden;
+  max-width: 500px;
+  text-align: left;
+  background-color: rgba(255, 255, 255, 0.322);
+}
+
+body main #container-for-content h2 {
+  color: #fdfdfd;
   padding: 5px;
 }
 
-body p {
+body main #container-for-content p {
   padding: 5px;
-  color: blue;
+  color: #f8f8f8;
 }
 
-body ol li {
+body main #container-for-content ol li {
   padding: 5px 5px 3px 5px;
-  color: saddlebrown;
+  color: #c5c1bf;
 }
 /*# sourceMappingURL=styles.css.map */
