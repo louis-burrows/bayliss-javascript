@@ -3,83 +3,135 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Libre Baskerville', serif;
-
 }
 
 body {
   
-  background-image: url("./images/body-background.png");
-  background-repeat: repeat-y;
-  background-position-x: center;
-  background-color: black;
-  // background-attachment: fixed;
-  
   #top-section {
+
+    background-image: url("./images/body-background2.png");
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-color: black;
+    background-attachment: fixed;
+    background-size: 450px auto;
     
-    position: fixed;
+    
     top: 0px;
     width: 100%;
     min-height: 110px;     
     h1 {
       color: white;
       padding: 15px;
-      min-height: 70px;
-      max-height: 70px;
-      font-size: 20px;
+      min-height: 120px;
+      max-height: 120px;
+      font-size: 25px;
       font-weight: 600;
       text-align: center;
-      background: transparent;
+      background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 1));
     }
     nav {
-      min-height: 40px;
-      background-image: linear-gradient(rgba(0, 0, 0, 0), rgb(0, 0, 0));
+      padding: 5px 0px 5px 0px;
+      background-color: black;
+      min-height: 30px;
       text-align: center;
-      
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-end;
       a {
-        margin: 5px;
-        padding: 5px;
-        width: 80px;
-        min-width: 80px;
-        border: 1px rgb(0, 0, 0) solid;
-        border-radius: 5px;
+        position: relative;
+        margin: 5px 5px 5px 5px;
+        padding: 6px;
         text-decoration: none;
-        color: rgb(0, 0, 0);
+        color: rgb(255, 255, 255);
         font-weight: 900;
-        background-color: rgba(255, 255, 255, 0.39);
+      
       }
-      #link1 {
-        
-      } 
-      #link2 {
-       
-      } 
-    }
-    
+      a:visited {
+        color: white;
+      }
+      a:hover {
+        background-color: rgba(253, 253, 253, 0.185);
+      }
+      a:before, a:after {
+        position: absolute;
+        opacity: 0.5;
+        height: 100%;
+        width: 3px;
+        content: '';
+        background: #FFF;
+        transition: all 0.4s;
+      }
+      a:before {
+        left: -2px;
+        top: 0px;
+      }
+      a:after {
+        right: -2px;
+        bottom: 0px;
+      }
+      a:hover:before, a:hover:after {
+        opacity: 1;
+        height: 2px;
+        width: 102%;
+      }    
   }
 
   main {
  
     #container-for-content {
-      position: sticky;
-      top: 110px;
-      overflow: hidden;
+      margin: 0 auto;
       max-width: 500px;
       text-align: left;
-      background-color: rgba(255, 255, 255, 0.322);
-    
-      h2 {
-        color: rgb(253, 253, 253);
-        padding: 5px;
+      display: grid;
+      grid-template-columns: 100%;
+      grid-template-rows: auto auto auto auto;
+
+      #company-overview {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 25% 25% 25% 25%;
+        background-color: cornflowerblue;
+        grid-column: 1 / span 1;
+        grid-row: 1 / span 1;
+        h2 {
+          grid-column: 1 / span 1;
+          grid-row: 1 / span 1;
+          color: rgb(253, 253, 253);
+          padding: 15px;
+        }
+        p {
+          grid-column: 1 / span 1;
+          grid-row: 2 / span 1;
+          padding: 5px;
+          color: rgb(248, 248, 248);
+        }
+        ol {
+          grid-column: 1 / span 1;
+          grid-row: 3 / span 1;
+          li {
+          padding: 5px 5px 3px 5px;
+          color: rgb(197, 193, 191);
+          }
+        }
       }
 
-      p {
-        padding: 5px;
-        color: rgb(248, 248, 248);
+      #portfolio {
+        grid-column: 1 / span 1;
+        grid-row: 2 / span 1;
+        background-color: cornsilk;
+
       }
 
-      ol li {
-        padding: 5px 5px 3px 5px;
-        color: rgb(197, 193, 191);
+      #photo {
+        background-color: darkkhaki;
+        #picture-placeholder {
+          width: 300px;
+          height: 300px;
+          background-color: darkorange;
+        }
       }
     }
   }
