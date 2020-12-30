@@ -5,26 +5,22 @@
   font-family: 'Libre Baskerville', serif;
 }
 
+
+
 body {
   
   #top-section {
-
     background-image: url("./images/body-background2.png");
     background-repeat: no-repeat;
     background-position-x: center;
     background-color: black;
     background-attachment: fixed;
     background-size: 450px auto;
-    
-    
-    top: 0px;
-    width: 100%;
-    min-height: 110px;     
+    width: 100%;   
     h1 {
       color: white;
-      padding: 15px;
       min-height: 120px;
-      max-height: 120px;
+      padding: 15px;
       font-size: 25px;
       font-weight: 600;
       text-align: center;
@@ -47,7 +43,6 @@ body {
         text-decoration: none;
         color: rgb(255, 255, 255);
         font-weight: 900;
-      
       }
       a:visited {
         color: white;
@@ -77,9 +72,14 @@ body {
         height: 2px;
         width: 102%;
       }    
+    }
   }
 
   main {
+    width: 100%;
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 22%, rgba(2,160,193,1) 100%);
+    background-attachment: fixed;
  
     #container-for-content {
       margin: 0 auto;
@@ -93,7 +93,7 @@ body {
         display: grid;
         grid-template-columns: 100%;
         grid-template-rows: 25% 25% 25% 25%;
-        background-color: cornflowerblue;
+        background-color: rgba(255, 255, 255, 0.144);
         grid-column: 1 / span 1;
         grid-row: 1 / span 1;
         h2 {
@@ -136,3 +136,4 @@ body {
     }
   }
 }
+

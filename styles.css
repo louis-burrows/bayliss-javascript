@@ -13,16 +13,13 @@ body #top-section {
   background-color: black;
   background-attachment: fixed;
   background-size: 450px auto;
-  top: 0px;
   width: 100%;
-  min-height: 110px;
 }
 
 body #top-section h1 {
   color: white;
-  padding: 15px;
   min-height: 120px;
-  max-height: 120px;
+  padding: 15px;
   font-size: 25px;
   font-weight: 600;
   text-align: center;
@@ -96,6 +93,14 @@ body #top-section nav a:hover:before, body #top-section nav a:hover:after {
   width: 102%;
 }
 
+body main {
+  width: 100%;
+  background: black;
+  background: -webkit-gradient(linear, left top, left bottom, from(black), color-stop(22%, black), to(#02a0c1));
+  background: linear-gradient(180deg, black 0%, black 22%, #02a0c1 100%);
+  background-attachment: fixed;
+}
+
 body main #container-for-content {
   margin: 0 auto;
   max-width: 500px;
@@ -115,7 +120,7 @@ body main #container-for-content #company-overview {
       grid-template-columns: 100%;
   -ms-grid-rows: 25% 25% 25% 25%;
       grid-template-rows: 25% 25% 25% 25%;
-  background-color: cornflowerblue;
+  background-color: rgba(255, 255, 255, 0.144);
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-column: 1 / span 1;
