@@ -5,17 +5,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- the icon on the website tab -->
   <link rel="icon" href="./images/stained-glass-icon.PNG">
 
+  <!-- importing font awesome icons -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
-
 
   <!-- Importing a font from google -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
 
   <!-- Importing CSS -->
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="./styles.css">
+
+  <!-- Importing JS -->
+  <script src="./main.js" async defer></script>
 
   <title>Bayliss Glass</title>
 </head>
@@ -30,19 +34,18 @@
       Welcome to Bayliss Glass
     </h1>
 
-    <nav class="fancy-buttons">
-      
-      <a href="#company-overview">
+    <nav id="navbar">
+      <a href="#overview-anchor">
         Overview
       </a>
-      <a href="#portfolio">
+      <a href="#portfolio-anchor">
         Portfolio
+      </a>
+      <a href="#photo-anchor">
+        Photo Album
       </a>
       <a href="#portfolio">
         Services
-      </a>
-      <a href="#portfolio">
-        Photo Album
       </a>
       <a href="#portfolio">
         Contact
@@ -51,21 +54,21 @@
   
   </header>
 
-
-  <main>
-
   
+  <main>  
 
     <section id="container-for-content">
 
-      <section id="company-overview">
+      <div id="overview-anchor"></div>
+      
+      <section id="company-overview" class="title-paragraph-bullets">
         <h2>
           Company overview
         </h2>
         <p id="overview-paragraph">
           Nick Bayliss has over 40 years experience of providing high quality design, manufacture, installation and restoration of stained and painted glass and leaded lights, which includes the following...
         </p>
-        <ol id="overview-list">
+        <ul id="overview-list">
           <li>
             Traditional and modern stained and painted glass windows and doors
           </li>
@@ -87,18 +90,19 @@
           <li>
             In addition, our skilled craftsmen can repair stained glass, painted glass and leaded lights from any period or design, and manufacture reproductions to match the originals
           </li>
-        </ol>
+        </ul>
       </section>
 
+      <div id="portfolio-anchor"></div>
 
-      <section id="portfolio">
+      <section id="portfolio" class="title-paragraph-bullets">
         <h2 >
           Portfolio
         </h2>
         <p id="portfolio-paragraph">
           Since its formation in 1980, the company has worked on small scale repairs and new panels through to large scale restoration projects
         </p>
-        <ol>
+        <ul>
           <li>
             Churches and Institutions
           </li>
@@ -114,46 +118,30 @@
           <li>
             Owners of modern and period property
           </li>
-        </ol>
+        </ul>
       </section>
+
+      <div id="photo-anchor"></div>
+
 
       <section id="photo">
         <h2 >
           Photo
         </h2>
-        <div id="picture-placeholder">
+        <div id="picture-placeholder"></div>
+        <div id="picture-placeholder"></div>
+        <div id="picture-placeholder"></div>
+        <div id="picture-placeholder"></div>
+        <div id="picture-placeholder"></div>
+        <div id="picture-placeholder"></div>
 
-        </div>
+        
       </section>
 
-      <section id="portfolio">
-        <h2 >
-          Portfolio
-        </h2>
-        <p id="portfolio-paragraph">
-          Since its formation in 1980, the company has worked on small scale repairs and new panels through to large scale restoration projects
-        </p>
-        <ol>
-          <li>
-            Churches and Institutions
-          </li>
-          <li>
-            National Trust
-          </li>
-          <li>
-            English Heritage
-          </li>
-          <li>
-            Listed buildings
-          </li>
-          <li>
-            Owners of modern and period property
-          </li>
-        </ol>
-      </section>
-
+      
     </section>
   </main>  
+
 
 </body>
 </html>

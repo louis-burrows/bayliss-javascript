@@ -6,33 +6,40 @@
   font-family: 'Libre Baskerville', serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+.sticky {
+  position: fixed;
+  top: -10px;
+  width: 100%;
+  overflow: hidden;
+}
+
 body #top-section {
+  width: 100%;
   background-image: url("./images/body-background2.png");
   background-repeat: no-repeat;
   background-position-x: center;
   background-color: black;
   background-attachment: fixed;
   background-size: 450px auto;
-  top: 0px;
-  width: 100%;
-  min-height: 110px;
 }
 
 body #top-section h1 {
   color: white;
-  padding: 15px;
-  min-height: 120px;
-  max-height: 120px;
+  min-height: 150px;
+  padding: 15px 15px 15px 15px;
   font-size: 25px;
-  font-weight: 600;
   text-align: center;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), color-stop(rgba(0, 0, 0, 0)), to(black));
-  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), black);
+  text-shadow: black 3px 3px 3px;
 }
 
 body #top-section nav {
-  padding: 5px 0px 5px 0px;
-  background-color: black;
+  padding: 30px 0px 20px 0px;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), color-stop(15%, black), to(black));
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, black 15%, black 100%);
   min-height: 30px;
   text-align: center;
   display: -webkit-box;
@@ -50,6 +57,7 @@ body #top-section nav {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+  z-index: 3;
 }
 
 body #top-section nav a {
@@ -73,7 +81,7 @@ body #top-section nav a:before, body #top-section nav a:after {
   position: absolute;
   opacity: 0.5;
   height: 100%;
-  width: 3px;
+  width: 2px;
   content: '';
   background: #FFF;
   -webkit-transition: all 0.4s;
@@ -93,81 +101,54 @@ body #top-section nav a:after {
 body #top-section nav a:hover:before, body #top-section nav a:hover:after {
   opacity: 1;
   height: 2px;
-  width: 102%;
+  width: 103%;
+}
+
+body main {
+  padding-top: 100vh;
+  width: 100%;
+  background: black;
+  background: -webkit-gradient(linear, left top, left bottom, from(black), color-stop(50%, black), to(#026477));
+  background: linear-gradient(180deg, black 0%, black 50%, #026477 100%);
+  background-attachment: fixed;
 }
 
 body main #container-for-content {
-  margin: 0 auto;
-  max-width: 500px;
+  margin: 0px auto;
+  width: 85%;
+  max-width: 600px;
   text-align: left;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 100%;
-      grid-template-columns: 100%;
-  -ms-grid-rows: auto auto auto auto;
-      grid-template-rows: auto auto auto auto;
 }
 
-body main #container-for-content #company-overview {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 100%;
-      grid-template-columns: 100%;
-  -ms-grid-rows: 25% 25% 25% 25%;
-      grid-template-rows: 25% 25% 25% 25%;
-  background-color: cornflowerblue;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 1;
-  grid-column: 1 / span 1;
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 1;
-  grid-row: 1 / span 1;
+body main #container-for-content .title-paragraph-bullets {
+  margin-top: 40px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.13);
 }
 
-body main #container-for-content #company-overview h2 {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 1;
-  grid-column: 1 / span 1;
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 1;
-  grid-row: 1 / span 1;
+body main #container-for-content .title-paragraph-bullets h2 {
+  text-align: center;
+  font-size: 20px;
   color: #fdfdfd;
-  padding: 15px;
+  padding: 10px;
 }
 
-body main #container-for-content #company-overview p {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 1;
-  grid-column: 1 / span 1;
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 1;
-  grid-row: 2 / span 1;
-  padding: 5px;
-  color: #f8f8f8;
+body main #container-for-content .title-paragraph-bullets p {
+  padding: 20px;
+  font-size: 13px;
+  color: #e0eff3;
 }
 
-body main #container-for-content #company-overview ol {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 1;
-  grid-column: 1 / span 1;
-  -ms-grid-row: 3;
-  -ms-grid-row-span: 1;
-  grid-row: 3 / span 1;
+body main #container-for-content .title-paragraph-bullets ul {
+  margin-bottom: 15px;
+  list-style-position: inside;
 }
 
-body main #container-for-content #company-overview ol li {
-  padding: 5px 5px 3px 5px;
-  color: #c5c1bf;
-}
-
-body main #container-for-content #portfolio {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 1;
-  grid-column: 1 / span 1;
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 1;
-  grid-row: 2 / span 1;
-  background-color: cornsilk;
+body main #container-for-content .title-paragraph-bullets ul li {
+  font-size: 12px;
+  padding: 15px 25px 3px 25px;
+  color: #c3d2d3;
 }
 
 body main #container-for-content #photo {
@@ -178,5 +159,12 @@ body main #container-for-content #photo #picture-placeholder {
   width: 300px;
   height: 300px;
   background-color: darkorange;
+  border: black 2px solid;
+}
+
+body main #container-for-content #overview-anchor, body main #container-for-content #portfolio-anchor, body main #container-for-content #photo-anchor {
+  height: 150px;
+  width: 100%;
+  background-color: transparent;
 }
 /*# sourceMappingURL=styles.css.map */

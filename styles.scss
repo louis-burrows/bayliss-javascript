@@ -5,10 +5,22 @@
   font-family: 'Libre Baskerville', serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+.sticky {
+  position: fixed;
+  top: -10px;
+  width: 100%;
+  overflow: hidden;
+}
+
 body {
   
   #top-section {
-
+    
+    width: 100%;   
     background-image: url("./images/body-background2.png");
     background-repeat: no-repeat;
     background-position-x: center;
@@ -16,23 +28,18 @@ body {
     background-attachment: fixed;
     background-size: 450px auto;
     
-    
-    top: 0px;
-    width: 100%;
-    min-height: 110px;     
     h1 {
-      color: white;
-      padding: 15px;
-      min-height: 120px;
-      max-height: 120px;
+      color: rgb(255, 255, 255);
+      min-height: 150px;
+      padding: 15px 15px 15px 15px;
       font-size: 25px;
-      font-weight: 600;
       text-align: center;
-      background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 1));
+      // background-color: rgba(0, 0, 0, 0.2);
+      text-shadow:black 3px 3px 3px;
     }
     nav {
-      padding: 5px 0px 5px 0px;
-      background-color: black;
+      padding: 30px 0px 20px 0px;
+      background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 15%, rgba(0,0,0,1) 100%);
       min-height: 30px;
       text-align: center;
       display: flex;
@@ -40,6 +47,7 @@ body {
       flex-wrap: wrap;
       justify-content: center;
       align-items: flex-end;
+      z-index: 3;
       a {
         position: relative;
         margin: 5px 5px 5px 5px;
@@ -47,7 +55,6 @@ body {
         text-decoration: none;
         color: rgb(255, 255, 255);
         font-weight: 900;
-      
       }
       a:visited {
         color: white;
@@ -59,7 +66,7 @@ body {
         position: absolute;
         opacity: 0.5;
         height: 100%;
-        width: 3px;
+        width: 2px;
         content: '';
         background: #FFF;
         transition: all 0.4s;
@@ -75,55 +82,54 @@ body {
       a:hover:before, a:hover:after {
         opacity: 1;
         height: 2px;
-        width: 102%;
+        width: 103%;
       }    
+    }
   }
 
+  
   main {
- 
-    #container-for-content {
-      margin: 0 auto;
-      max-width: 500px;
-      text-align: left;
-      display: grid;
-      grid-template-columns: 100%;
-      grid-template-rows: auto auto auto auto;
+    padding-top: 100vh;
+    width: 100%;
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 50%, rgb(2, 100, 119) 100%);
+    background-attachment: fixed;
+    
 
-      #company-overview {
-        display: grid;
-        grid-template-columns: 100%;
-        grid-template-rows: 25% 25% 25% 25%;
-        background-color: cornflowerblue;
-        grid-column: 1 / span 1;
-        grid-row: 1 / span 1;
+    #container-for-content {
+      margin: 0px auto;
+      width: 85%;
+      max-width: 600px;
+      text-align: left;
+
+      .title-paragraph-bullets {
+        margin-top: 40px;
+        margin-bottom: 30px;
+        border-radius: 10px;
+        background-color: rgba(255, 255, 255, 0.13);
         h2 {
-          grid-column: 1 / span 1;
-          grid-row: 1 / span 1;
+          text-align: center;
+          font-size: 20px;
           color: rgb(253, 253, 253);
-          padding: 15px;
+          padding: 10px;
         }
         p {
-          grid-column: 1 / span 1;
-          grid-row: 2 / span 1;
-          padding: 5px;
-          color: rgb(248, 248, 248);
+          padding: 20px;
+          font-size: 13px;
+          color: rgb(224, 239, 243);
         }
-        ol {
-          grid-column: 1 / span 1;
-          grid-row: 3 / span 1;
+        ul {
+          margin-bottom: 15px;
+          list-style-position: inside;
           li {
-          padding: 5px 5px 3px 5px;
-          color: rgb(197, 193, 191);
+          font-size: 12px;
+          padding: 15px 25px 3px 25px;
+          color: rgb(195, 210, 211);
           }
         }
       }
 
-      #portfolio {
-        grid-column: 1 / span 1;
-        grid-row: 2 / span 1;
-        background-color: cornsilk;
-
-      }
+     
 
       #photo {
         background-color: darkkhaki;
@@ -131,8 +137,22 @@ body {
           width: 300px;
           height: 300px;
           background-color: darkorange;
+          border: black 2px solid;
         }
+      }
+
+      #overview-anchor, #portfolio-anchor, #photo-anchor {
+        height: 150px;
+        width: 100%;
+        background-color: transparent;
       }
     }
   }
 }
+
+@media only screen and (min-width: 480px) {
+  main {
+
+  }
+}
+
