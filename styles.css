@@ -6,6 +6,17 @@
   font-family: 'Libre Baskerville', serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+.sticky {
+  position: fixed;
+  top: -30px;
+  width: 100%;
+  overflow: hidden;
+}
+
 body #top-section {
   background-image: url("./images/body-background2.png");
   background-repeat: no-repeat;
@@ -14,21 +25,22 @@ body #top-section {
   background-attachment: fixed;
   background-size: 450px auto;
   width: 100%;
+  background-clip: border-box;
 }
 
 body #top-section h1 {
   color: white;
-  min-height: 120px;
+  min-height: 150px;
   padding: 15px;
   font-size: 25px;
   text-align: center;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), color-stop(rgba(0, 0, 0, 0)), to(black));
-  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), black);
 }
 
 body #top-section nav {
-  padding: 10px 0px 5px 0px;
-  background-color: black;
+  padding: 40px 0px 10px 0px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), color-stop(25%, black), to(black));
+  background-image: linear-gradient(rgba(0, 0, 0, 0) 0%, black 25%, black 100%);
+  z-index: 5;
   min-height: 30px;
   text-align: center;
   display: -webkit-box;
@@ -46,6 +58,7 @@ body #top-section nav {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+  z-index: 3;
 }
 
 body #top-section nav a {
@@ -93,15 +106,16 @@ body #top-section nav a:hover:before, body #top-section nav a:hover:after {
 }
 
 body main {
+  padding-top: 150px;
   width: 100%;
   background: black;
-  background: -webkit-gradient(linear, left top, left bottom, from(black), color-stop(42%, black), to(#026477));
-  background: linear-gradient(180deg, black 0%, black 42%, #026477 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(black), color-stop(50%, black), to(#026477));
+  background: linear-gradient(180deg, black 0%, black 50%, #026477 100%);
   background-attachment: fixed;
 }
 
 body main #container-for-content {
-  margin: 0 auto;
+  margin: 0px auto;
   width: 85%;
   max-width: 600px;
   text-align: left;
@@ -113,74 +127,35 @@ body main #container-for-content {
       grid-template-rows: auto auto auto auto;
 }
 
-body main #container-for-content #company-overview {
+body main #container-for-content .title-paragraph-bullets {
   margin-top: 40px;
-  margin-bottom: 80px;
+  margin-bottom: 30px;
   border-radius: 10px;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 100%;
-      grid-template-columns: 100%;
-  -ms-grid-rows: 50px 130px auto;
-      grid-template-rows: 50px 130px auto;
   background-color: rgba(255, 255, 255, 0.13);
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 1;
-  grid-column: 1 / span 1;
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 1;
-  grid-row: 1 / span 1;
+}
+
+body main #container-for-content .title-paragraph-bullets h2 {
+  text-align: center;
+  font-size: 20px;
+  color: #fdfdfd;
   padding: 10px;
 }
 
-body main #container-for-content #company-overview h2 {
-  text-align: center;
-  font-size: 20px;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 1;
-  grid-column: 1 / span 1;
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 1;
-  grid-row: 1 / span 1;
-  color: #fdfdfd;
+body main #container-for-content .title-paragraph-bullets p {
+  padding: 20px;
+  font-size: 13px;
+  color: #e0eff3;
 }
 
-body main #container-for-content #company-overview p {
-  font-size: 14px;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 1;
-  grid-column: 1 / span 1;
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 1;
-  grid-row: 2 / span 1;
-  color: #f8f8f8;
-}
-
-body main #container-for-content #company-overview ul {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 1;
-  grid-column: 1 / span 1;
-  -ms-grid-row: 3;
-  -ms-grid-row-span: 1;
-  grid-row: 3 / span 1;
-  margin-bottom: 10px;
+body main #container-for-content .title-paragraph-bullets ul {
+  margin-bottom: 15px;
   list-style-position: inside;
 }
 
-body main #container-for-content #company-overview ul li {
+body main #container-for-content .title-paragraph-bullets ul li {
   font-size: 12px;
-  padding: 10px 5px 3px 5px;
-  color: #c5c1bf;
-}
-
-body main #container-for-content #portfolio {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 1;
-  grid-column: 1 / span 1;
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 1;
-  grid-row: 2 / span 1;
-  background-color: cornsilk;
+  padding: 15px 25px 3px 25px;
+  color: #c3d2d3;
 }
 
 body main #container-for-content #photo {
@@ -191,5 +166,6 @@ body main #container-for-content #photo #picture-placeholder {
   width: 300px;
   height: 300px;
   background-color: darkorange;
+  border: black 2px solid;
 }
 /*# sourceMappingURL=styles.css.map */
