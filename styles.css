@@ -12,7 +12,7 @@ html {
 
 .sticky {
   position: fixed;
-  top: -10px;
+  top: -20px;
   width: 100%;
   overflow: hidden;
 }
@@ -121,6 +121,7 @@ body main #container-for-content {
 }
 
 body main #container-for-content .title-paragraph-bullets {
+  padding: 10px;
   margin-top: 40px;
   margin-bottom: 30px;
   border-radius: 10px;
@@ -129,13 +130,17 @@ body main #container-for-content .title-paragraph-bullets {
 
 body main #container-for-content .title-paragraph-bullets h2 {
   text-align: center;
-  font-size: 20px;
+  font-size: 22px;
   color: #fdfdfd;
-  padding: 10px;
+}
+
+body main #container-for-content .title-paragraph-bullets label {
+  font-size: 16px;
+  color: #fdfdfd;
 }
 
 body main #container-for-content .title-paragraph-bullets p {
-  padding: 20px;
+  padding: 25px 10px 10px 10px;
   font-size: 13px;
   color: #e0eff3;
 }
@@ -152,17 +157,17 @@ body main #container-for-content .title-paragraph-bullets ul li {
 }
 
 body main #container-for-content #photo {
-  background-color: darkkhaki;
+  background-color: rgba(255, 255, 255, 0.23);
 }
 
 body main #container-for-content #photo #picture-placeholder {
-  width: 300px;
-  height: 300px;
+  width: 200px;
+  height: 200px;
   background-color: darkorange;
   border: black 2px solid;
 }
 
-body main #container-for-content #overview-anchor, body main #container-for-content #portfolio-anchor, body main #container-for-content #photo-anchor {
+body main #container-for-content #overview-anchor, body main #container-for-content #portfolio-anchor, body main #container-for-content #photo-anchor, body main #container-for-content #services-anchor, body main #container-for-content #contact-anchor {
   height: 150px;
   width: 100%;
   background-color: transparent;
