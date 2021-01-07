@@ -15,7 +15,7 @@ html {
 
 .sticky {
   position: fixed;
-  top: -25px;
+  top: -15px;
   width: 100%;
   overflow: hidden;
 }
@@ -39,7 +39,7 @@ body #top-section h1 {
   text-shadow: black 3px 3px 3px;
 }
 
-body #top-section nav {
+body #top-section #navbar {
   padding: 30px 0px 20px 0px;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), color-stop(15%, black), to(black));
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, black 15%, black 100%);
@@ -52,6 +52,7 @@ body #top-section nav {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  row-gap: 20px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -webkit-box-pack: center;
@@ -63,7 +64,7 @@ body #top-section nav {
   z-index: 3;
 }
 
-body #top-section nav a {
+body #top-section #navbar li a {
   position: relative;
   margin: 5px 5px 5px 5px;
   padding: 6px;
@@ -72,15 +73,15 @@ body #top-section nav a {
   font-weight: 900;
 }
 
-body #top-section nav a:visited {
+body #top-section #navbar li a:visited {
   color: white;
 }
 
-body #top-section nav a:hover {
+body #top-section #navbar li a:hover {
   background-color: rgba(253, 253, 253, 0.185);
 }
 
-body #top-section nav a:before, body #top-section nav a:after {
+body #top-section #navbar li a:before, body #top-section #navbar li a:after {
   position: absolute;
   opacity: 0.5;
   height: 100%;
@@ -91,17 +92,17 @@ body #top-section nav a:before, body #top-section nav a:after {
   transition: all 0.4s;
 }
 
-body #top-section nav a:before {
+body #top-section #navbar li a:before {
   left: -2px;
   top: 0px;
 }
 
-body #top-section nav a:after {
+body #top-section #navbar li a:after {
   right: -2px;
   bottom: 0px;
 }
 
-body #top-section nav a:hover:before, body #top-section nav a:hover:after {
+body #top-section #navbar li a:hover:before, body #top-section #navbar li a:hover:after {
   opacity: 1;
   height: 2px;
   width: 103%;
@@ -147,15 +148,40 @@ body main #container-for-content .title-paragraph-bullets h2 {
   color: #fdfdfd;
 }
 
-body main #container-for-content .title-paragraph-bullets label {
-  font-size: 16px;
+body main #container-for-content .title-paragraph-bullets h4.service-title {
+  font-size: 14px;
   color: #fdfdfd;
+  padding: 15px;
+}
+
+body main #container-for-content .title-paragraph-bullets h4.service-title i {
+  display: block;
+  margin-top: 10px;
+}
+
+body main #container-for-content .title-paragraph-bullets h4.service-title h4.service-title:hover {
+  cursor: pointer;
+  color: #a2dbdd;
+}
+
+body main #container-for-content .title-paragraph-bullets div.service-info {
+  color: #ccc5ee;
+  font-size: 13px;
+  padding: 15px;
+  border: 1px white solid;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.082);
+  margin: 20px;
+  display: none;
+  overflow: hidden;
+  -webkit-transition: max-height 0.5s ease-out;
+  transition: max-height 0.5s ease-out;
 }
 
 body main #container-for-content .title-paragraph-bullets p {
   padding: 25px 10px 10px 10px;
   font-size: 13px;
-  color: #e0eff3;
+  color: #f4fbfd;
 }
 
 body main #container-for-content .title-paragraph-bullets ul {
@@ -164,9 +190,9 @@ body main #container-for-content .title-paragraph-bullets ul {
 }
 
 body main #container-for-content .title-paragraph-bullets ul li {
-  font-size: 12px;
+  font-size: 13px;
   padding: 15px 25px 3px 25px;
-  color: #c3d2d3;
+  color: #dce7e7;
 }
 
 body main #container-for-content #contact {
@@ -201,9 +227,23 @@ body main #container-for-content #photo {
   background-color: rgba(255, 255, 255, 0.23);
 }
 
-body main #container-for-content #photo #picture-placeholder {
-  width: 200px;
-  height: 200px;
+body main #container-for-content #photo .photo-collection {
+  margin: 25px 0px 25px 0px;
+  gap: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 33% 33% 33%;
+      grid-template-columns: 33% 33% 33%;
+  -ms-grid-rows: 33% 33% 33%;
+      grid-template-rows: 33% 33% 33%;
+}
+
+body main #container-for-content #photo .photo-collection .picture-placeholder {
+  width: 40px;
+  height: 40px;
   background-color: darkorange;
   border: black 2px solid;
 }
