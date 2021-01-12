@@ -11,4 +11,8 @@ const toggleNav = () => {
   }
 }
 
+let picture = document.getElementsByClassName("pictureExample");
 
+const viewLargeImage = () => {
+  let largeImageLocation = document.getElementById("main-photo");
+}
